@@ -1,4 +1,4 @@
-                        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" >
 
 <head>
@@ -53,10 +53,8 @@
 </div>
 <div class="base">  
 &copy; 2018 CoopesingUD.com
-<script type="text/javascript">
-    var d = new Date();
-    document.write('Fecha: '+d.getDate(),"/"+d.getMonth(),"/"+d.getFullYear());
-</script>
+    <div id="fecha"></div>
+
 <script type="text/javascript">
 function startTime(){
 today=new Date();
@@ -67,9 +65,21 @@ m=checkTime(m);
 s=checkTime(s);
 document.getElementById('reloj').innerHTML=h+":"+m+":"+s;
 t=setTimeout('startTime()',500);}
+function changeday()
+{
+    
+var d = new Date();
+    
+    var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio",
+         "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+    
+//document.write('Fecha: '+d.getDate(),"/"+months[d.getMonth()],"/"+d.getFullYear());    
+document.getElementById('fecha').innerHTML="Fecha: "+d.getDate()+" / "+months[d.getMonth()]+" / "+d.getFullYear();
+    
+}    
 function checkTime(i)
 {if (i<10) {i="0" + i;}return i;}
-window.onload=function(){startTime();}
+window.onload=function(){startTime();changeday();}
 </script>
 <div id="reloj" style="font-size:20px;"></div>
 </div>
