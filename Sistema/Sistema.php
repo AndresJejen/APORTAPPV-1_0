@@ -1,6 +1,5 @@
 <?php
 require 'conexion.php';
-$datos = array("_Nombre"=>"Admin2","_Pass"=>"123456");
 
 $Connecta = new conexion();
 
@@ -10,13 +9,13 @@ mysqli_data_seek ($result, 0);
 
 $extraido= mysqli_fetch_array($result);
 
-echo "- Nombre: ".$extraido['NombreAdmin']."<br/>";
+echo "- Nombre: ".$extraido[1]."<br/>";
 
 echo "- Contraseña: ".$extraido[2]."<br/>";
 
-echo "- Pregunta: ".$extraido['Pregunta']."<br/>";
+echo "- Pregunta: ".$extraido[3]."<br/>";
 
-echo "- Respuesta: ".$extraido['Respuesta']."<br/>";
+echo "- Respuesta: ".$extraido[4]."<br/>";
 
 mysqli_free_result($result);
 ?>

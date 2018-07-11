@@ -14,6 +14,8 @@
 </head>
 
 <body>
+<script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Scripts/main.js"></script>
 <div class="header">
     <?php
         $bienvenido = "Bienvenido a APORTAPP v. 2.0  Ubicación del Servidor: Bogotá";
@@ -28,13 +30,14 @@
                     
 			
 			<div class="sign-up-htm">
+			<form action="" id=formulario>
 				<div class="group">
-					<label for="user" class="label">Usuario</label>
-					<input id="user" type="text" class="input">
+					<label for="user"  class="label">Usuario</label>
+					<input  name="nombre" type="text" class="input" />
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Contraseña</label>
-					<input id="pass" type="password" class="input" data-type="password">
+					<input name="passw" type="password" class="input" data-type="password" />
 				</div>
 				<center>
 				<div class="group">
@@ -47,6 +50,7 @@
                                     <button class="button" type="submit" name="your_name" value="your_value" class="btn-link">¿ Olvidaste la contraseña ?</button>
                                 </form>
                                 </center>
+                </form>
 			</div>
 		</div>
 	</div>
