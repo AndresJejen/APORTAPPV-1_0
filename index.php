@@ -42,14 +42,14 @@
 				<div class="group">
 					<input type="submit" class="button_2" value="Ingresar">
 				</div>
+                    </form>
 				<div class="hr"></div>
                                 </center>
 				<center>
-                                <form action="forgot1.php" method="POST">                                     
+                                <form action="forgot1.php" method="POST">                               
                                     <button class="button" type="submit" name="your_name" value="your_value" class="btn-link">¿ Olvidaste la contraseña ?</button>
                                 </form>
                                 </center>
-                </form>
 			</div>
 		</div>
 	</div>
