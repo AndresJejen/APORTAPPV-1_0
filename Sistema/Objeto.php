@@ -1,14 +1,26 @@
 <?php
 require 'conexion.php';
 
-$Connecta = new conexion();
+class objeto
+{
+    //campos
+    private $Codigo1;
+    //Encapsulamiento
+    public function SetCodigo1($_Codigo1)
+        {
+            $this->Codigo1 = $_Codigo1;
+        }
+        
+    public function GetCodigo1()
+    {
+        return $this->Codigo1;
+    }
+    //Constructor
+    public function __construct()
+    {
+        
+    }
+    //Métodos
+}
 
-$result=$Connecta->SELECT("call LoginValidate('".$_POST['nombre']."','".$_POST['passw']."')");
-
-if($result->num_rows == 1):
-    $datos = mysqli_fetch_array($result);
-    echo json_encode(array('error' => false));
-else:
-    echo json_encode(array('error' => true));
-endif;
 ?>

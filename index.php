@@ -8,14 +8,13 @@
   
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
 
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/LoginStyle.css">
 
-  
 </head>
 
 <body>
 <script src="Scripts/jquery-3.1.1.min.js"></script>
-    <script src="Scripts/main.js"></script>
+    <script src="Scripts/ScriptConsultaLogin.js"></script>
 <div class="header">
     <?php
         $bienvenido = "Bienvenido a APORTAPP v. 2.0  Ubicación del Servidor: Bogotá";
@@ -33,11 +32,11 @@
 			<form action="" id=formulario>
 				<div class="group">
 					<label for="user"  class="label">Usuario</label>
-					<input  name="nombre" type="text" class="input" />
+					<input  name="nombre" pattern="[A-Za-z0-9_-]{1,20}" type="text" class="input" required/>
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Contraseña</label>
-					<input name="passw" type="password" class="input" data-type="password" />
+					<input name="passw" pattern="[A-Za-z0-9_-]{1,20}" type="password" class="input" data-type="password" required/>
 				</div>
 				<center>
 				<div class="group">
