@@ -125,15 +125,15 @@ foreign key (Cod_Administrador) references Administrador(Cod_Administrador),
 foreign key (Cod_Persona) references Persona(Cod_Persona)
 )ENGINE=INNODB;
 
- INSERT INTO `estadopersona` (`Cod_EstadoPersona`, `DescripcionEstadoPersona`) VALUES (NULL, 'Activo'),(NULL, 'InActivo'),(NULL, 'Activo Con deuda'), (NULL, 'Retirado');
+ INSERT INTO `EstadoPersona` (`Cod_EstadoPersona`, `DescripcionEstadoPersona`) VALUES (NULL, 'Activo'),(NULL, 'InActivo'),(NULL, 'Activo Con deuda'), (NULL, 'Retirado');
  
  INSERT INTO `Genero` (`Cod_Genero`, `DescripcionGenero`) VALUES (NULL, 'Masculino'),(NULL, 'Femenino'),(NULL, 'Otro');
  
- INSERT INTO `tipodocumento` (`Cod_Tipo_Indentificacion`, `DescripcionTipoDoc`) VALUES (NULL, 'CC'),(NULL, 'TI'),(NULL, 'CE'),(NULL, 'NIT'),(NULL, 'Otro');
+ INSERT INTO `TipoDocumento` (`Cod_Tipo_Indentificacion`, `DescripcionTipoDoc`) VALUES (NULL, 'CC'),(NULL, 'TI'),(NULL, 'CE'),(NULL, 'NIT'),(NULL, 'Otro');
 
-INSERT INTO `estadodeuda` (`Cod_EstadoDeuda`, `DescripcionEstadoDeuda`) VALUES (NULL, 'Pagada'), (NULL, 'Activa');
+INSERT INTO `EstadoDeuda` (`Cod_EstadoDeuda`, `DescripcionEstadoDeuda`) VALUES (NULL, 'Pagada'), (NULL, 'Activa');
 
 INSERT INTO PreguntasRecomendadas (Cod_Pregunta,Pregunta) VALUES (NULL,'CÚAL ES EL NOMBRE DE TU MADRE');
 
-INSERT INTO `administrador` (`Cod_Administrador`, `NombreAdmin`, `Contraseña`, `Pregunta`, `Respuesta`) VALUES (NULL, 'Admin2', '123456',1, 'Juan');
+INSERT INTO `Administrador` (`Cod_Administrador`, `NombreAdmin`, `Contraseña`, `Pregunta`, `Respuesta`) VALUES (NULL, 'Admin2', '123456',1, 'Juan');
 

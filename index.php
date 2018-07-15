@@ -6,15 +6,14 @@
   <title>LOGIN APORTAPP 1.0</title>
   
   
-  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
-
-      <link rel="stylesheet" href="css/LoginStyle.css">
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+<link rel="stylesheet" href="css/LoginStyle.css">
 
 </head>
 
 <body>
 <script src="Scripts/jquery-3.1.1.min.js"></script>
-    <script src="Scripts/ScriptConsultaLogin.js"></script>
+<script src="Scripts/ScriptConsultaLogin.js"></script>
 <div class="header">
     <?php
         $bienvenido = "Bienvenido a APORTAPP v. 2.0  Ubicación del Servidor: Bogotá";
@@ -46,7 +45,7 @@
 				<div class="hr"></div>
                                 </center>
 				<center>
-                                <form action="forgot1.php" method="POST">                               
+                                <form action="forgot.php" method="POST">                               
                                     <button class="button" type="submit" name="your_name" value="your_value" class="btn-link">¿ Olvidaste la contraseña ?</button>
                                 </form>
                                 </center>
