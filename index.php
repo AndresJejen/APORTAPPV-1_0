@@ -28,7 +28,7 @@
                     
 			
 			<div class="sign-up-htm">
-			<form action="" id=formulario>
+			<form action="" id=formulario >
 				<div class="group">
 					<label for="user"  class="label">Usuario</label>
 					<input  name="nombre" pattern="[A-Za-z0-9_-]{1,20}" type="text" class="input" required/>
