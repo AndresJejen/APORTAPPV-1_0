@@ -9,6 +9,7 @@
 		{
             $tipoConsulta = 0;
             $consulta = "call LoginValidate('".$_POST['nombre']."','".$_POST['passw']."')";
+            
 		}
 		else
 		{
@@ -22,21 +23,31 @@
                 $datos = mysqli_fetch_array($result);
                 if($tipoConsulta == 0)
                 {
-                    echo json_encode(array('error' => false));
+                    session_start();
+                    $_SESSION['usuario'] = $datos[1];
+                    header("Location:Principal/");   
                 }
                 else
                 {
-                    echo json_encode(array('error' => false, 'tipo' => $result));
+                    
                 }
                     
             else:
-                echo json_encode(array('error' => true));
+                if($tipoConsulta == 0)
+                {
+                    header("Location: https://localhost/APORTAPPV-1_0/");   
+                }
+                else
+                {
+                    
+                }
+                    
             endif;
         
             mysqli_free_result($result);
         }
         else
         {
-            echo json_encode(array('error' => true));
+            
         }
 ?>
