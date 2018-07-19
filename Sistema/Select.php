@@ -1,53 +1,51 @@
 <?php
         require 'conexion.php';
         $consulta = "";
-        $tipoConsulta = 0; //Si es 1 si se envia datos consultados si es 1 no se envian
-
         $Connecta = new conexion();
 
         if(isset($_POST["passw"])) //Si la consulta viene de LOGIN
 		{
-            $tipoConsulta = 0;
             $consulta = "call LoginValidate('".$_POST['nombre']."','".$_POST['passw']."')";
-            
+            $datos = seleccionador($consulta); 
+            if(!$datos)
+            {
+                session_start();
+                $_SESSION['usuario'] = $datos;
+                echo json_encode(array('error' => false,'datos'=>$datos));
+            }
+            else
+            {
+                echo json_encode(array('error' => true));
+            }
 		}
 		else
 		{
 
 		}
 
-        if($consulta != "")
+function seleccionador($consult){
+        if(!$consult)
         {
             $result=$Connecta->SELECT($consulta);
-            if($result->num_rows > 0):
-                $datos = mysqli_fetch_array($result);
-                if($tipoConsulta == 0)
+            
+            if(!$result)
+            {
+                while($datos = mysqli_fetch_assoc($result))
                 {
-                    session_start();
-                    $_SESSION['usuario'] = $datos[1];
-                    header("Location:Principal/");   
+                    $arreglo["data"][] = $datos;    
                 }
-                else
-                {
-                    
-                }
-                    
-            else:
-                if($tipoConsulta == 0)
-                {
-                    header("Location: https://localhost/APORTAPPV-1_0/");   
-                }
-                else
-                {
-                    
-                }
-                    
-            endif;
-        
+                return $arreglo;
+            }
+            else
+            {
+                die("Error en Consulta");
+                return false;
+            }
             mysqli_free_result($result);
         }
         else
         {
-            
+            return false;
         }
+}
 ?>

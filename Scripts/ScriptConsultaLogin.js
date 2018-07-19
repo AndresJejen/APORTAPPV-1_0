@@ -1,5 +1,5 @@
 jQuery(document).on('submit','#formulario',function(event){
-                    event.preventDefault();
+event.preventDefault();
 jQuery.ajax({
     url:'Sistema/Select.php',
     type:'POST',
@@ -12,10 +12,12 @@ jQuery.ajax({
     console.log(respuesta);
         if(!respuesta.error)    
         {
-            location.href='System/';
+            console.log(respuesta);
+         
         }
         else
         {
+            console.log(respuesta);
             location.href ='index.php';   
         }
 })

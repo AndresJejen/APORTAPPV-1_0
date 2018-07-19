@@ -1,6 +1,21 @@
 <?php
 try
 {
+    if(isset($_POST['UsOlvido']))
+    {
+        if(!($_POST['UsOlvido']==""))
+        {
+            $UsOlvido = $_POST['UsOlvido'];    
+        }
+        else
+        {    
+            $UsOlvido = "USUARIO NO VALIDO";    
+        }
+    }
+    else
+    {
+        $UsOlvido = "USUARIO NO VALIDO";
+    }
     session_start();
     error_reporting(0);
     $varsesion = $_SESSION['usuario'];

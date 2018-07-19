@@ -1,4 +1,4 @@
-<?php 
+<?php
 class conexion 
 {
 //Campos
@@ -69,7 +69,5 @@ class conexion
         $this->mysqli->close();
         return $result;
     }
-    
-    
 }
 ?>
