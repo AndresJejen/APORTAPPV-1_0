@@ -1,17 +1,18 @@
 <?php
         require 'conexion.php';
         $consulta = "";
-        $Connecta = new conexion();
 
         if(isset($_POST["passw"])) //Si la consulta viene de LOGIN
 		{
             $consulta = "call LoginValidate('".$_POST['nombre']."','".$_POST['passw']."')";
+            //Consulta para pruebas de php $consulta = "SELECT * FROM Administrador;";
             $datos = seleccionador($consulta); 
-            if(!$datos)
+            
+            if($datos)
             {
+                echo json_encode(array('error' => false));
                 session_start();
                 $_SESSION['usuario'] = $datos;
-                echo json_encode(array('error' => false,'datos'=>$datos));
             }
             else
             {
@@ -24,16 +25,17 @@
 		}
 
 function seleccionador($consult){
-        if(!$consult)
+    if($consult)
         {
-            $result=$Connecta->SELECT($consulta);
-            
-            if(!$result)
+            $Connecta = new conexion();
+            $result = $Connecta->SELECT($consult);
+            if($result)
             {
+                $arreglo["data"] = [];
                 while($datos = mysqli_fetch_assoc($result))
                 {
-                    $arreglo["data"][] = $datos;    
-                }
+                    $arreglo["data"][] = $datos;
+                }       
                 return $arreglo;
             }
             else

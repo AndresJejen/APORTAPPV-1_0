@@ -5,6 +5,6 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `LoginValidate`(
 IN _Nombre varchar(20),
 _Pass varchar(20)    
 )
-BEGIN SELECT * from Administrador where Administrador.NombreAdmin = _Nombre AND Administrador.Contraseña = _Pass; 
+BEGIN SELECT * from Administrador where Administrador.NombreAdmin = _Nombre AND Administrador.Contrasena = _Pass; 
 END 
 //

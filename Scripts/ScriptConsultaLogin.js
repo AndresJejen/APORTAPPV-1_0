@@ -9,11 +9,10 @@ jQuery.ajax({
     }
 })
 .done(function(respuesta){
-    console.log(respuesta);
-        if(!respuesta.error)    
+        if(!respuesta.error) 
         {
             console.log(respuesta);
-         
+            location.href ='Sistema/Principal/';   
         }
         else
         {
