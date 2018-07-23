@@ -12,7 +12,9 @@
             {
                 echo json_encode(array('error' => false));
                 session_start();
-                $_SESSION['usuario'] = $datos;
+                //var_dump($_SESSION['usuario'] = $datos["data"][0]['NombreAdmin']);
+                $_SESSION['usuario'] = $datos["data"][0]['NombreAdmin'];
+                
             }
             else
             {
@@ -29,13 +31,13 @@ function seleccionador($consult){
         {
             $Connecta = new conexion();
             $result = $Connecta->SELECT($consult);
-            if($result)
+            if(mysqli_num_rows($result))
             {
                 $arreglo["data"] = [];
                 while($datos = mysqli_fetch_assoc($result))
                 {
                     $arreglo["data"][] = $datos;
-                }       
+                }
                 return $arreglo;
             }
             else
