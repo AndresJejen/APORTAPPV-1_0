@@ -3,7 +3,7 @@ try
 {
     if(isset($_GET['Olvido']))
     {
-        if(!($_GET['Olvido']==""))
+        if($_GET['Olvido']!="")
         {
             $UsOlvido = $_GET['Olvido'];    
         }
@@ -45,7 +45,7 @@ catch(Exception $e)
     <link rel="stylesheet" href="css/Alertifycss/themes/default.css">
 
     <script src="Scripts/General/jquery/jquery-3.1.1.min.js"></script>
-    <script src="Scripts/General/alertifyjs/alertify.js"></script>   
+    <script src="Scripts/General/alertifyjs/alertify.js"></script>     
 </head>
 <body>
 
@@ -63,11 +63,11 @@ Bienvenido a APORTAPP v. 1.0  Ubicación del Servidor: Bogotá
 			<form action="" id="formulario" value="flogin">
 				<div class="group">
 					<label for="RecuUsuario" class="label">Usuario</label>
-                    <label id="RecuUsuario" name="RecuUsuario"  type="text" class="input"><?php echo $UsOlvido ?></label>
+                    <label id="RecuUsuario" name="RecuUsuario" type="text" class="input"><?php echo $UsOlvido ?></label>
 				</div>
 				<div class="group">
 					<label for="RecuPregunta" class="label">Pregunta </label>
-                    <label id="RecuPregunta" name="RecuPregunta" class="input" type="text" >¿  ?</label>
+                    ¿<input id="RecuPregunta" name="RecuPregunta" class="input" type="text" readonly>?
 				</div>
                                 <div class="group">
 					<label for="RecuRespuesta" class="label">Respuesta</label>
@@ -98,5 +98,7 @@ Bienvenido a APORTAPP v. 1.0  Ubicación del Servidor: Bogotá
 <script src="Scripts/General/Reloj.js"></script>
 <div id="reloj" style="font-size:20px;"></div>
 </div>
-</body>>
+<script src="Scripts/Login/ScriptConsultaPregunta.js"></script> 
+<script>pregunta("<?php echo $_GET['Olvido'] ?>");</script>
+</body>
 </html>

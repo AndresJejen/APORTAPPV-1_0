@@ -35,6 +35,21 @@
                 echo json_encode(array('error' => true));
             }
 		}
+        elseif(isset($_POST["PUser"]))
+		{
+            //echo "aqui";            
+            //var_dump($_POST["PUser"]);
+            $consulta = "call SelectPreguntaOlvido('".$_POST['PUser']."')";
+            $datos = seleccionador($consulta);
+            if($datos["data"][0]['Pregunta']!="")
+            {
+                echo json_encode(array('error' => false,'Padmin'=>$datos["data"][0]['Pregunta']));
+            }
+            else
+            {
+                echo json_encode(array('error' => true));
+            }
+		}
         else
         {
                 
@@ -50,7 +65,7 @@ function seleccionador($consult){
                 $arreglo["data"] = [];
                 while($datos = mysqli_fetch_assoc($result))
                 {
-                    $arreglo["data"][] = $datos;
+                    $arreglo["data"][] = array_map("utf8_encode",$datos);
                 }
                 return $arreglo;
             }

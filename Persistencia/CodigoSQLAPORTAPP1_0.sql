@@ -135,5 +135,9 @@ INSERT INTO `EstadoDeuda` (`Cod_EstadoDeuda`, `DescripcionEstadoDeuda`) VALUES (
 
 INSERT INTO PreguntasRecomendadas (Cod_Pregunta,Pregunta) VALUES (NULL,'CÚAL ES EL NOMBRE DE TU MADRE');
 
+INSERT INTO PreguntasRecomendadas (Cod_Pregunta,Pregunta) VALUES (NULL,'CÚAL ES EL NOMBRE DE TU Perro');
+
 INSERT INTO `Administrador` (`Cod_Administrador`, `NombreAdmin`, `Contraseña`, `Pregunta`, `Respuesta`) VALUES (NULL, 'Admin2', '123456',1, 'Juan');
+
+INSERT INTO `Administrador` (`Cod_Administrador`, `NombreAdmin`, `Contraseña`, `Pregunta`, `Respuesta`) VALUES (NULL, 'AdminHoli', '123456',2, 'Pedro');
 
