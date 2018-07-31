@@ -51,7 +51,7 @@ class conexion
     public function __construct()
     {
        $this->mysqli = mysqli_connect($this->GetServer(),$this->GetUsuario(),$this->GetPassword(),$this->GetDb()); 
-        /*
+    /*     
         if(!$this->mysqli)
         {
             echo "Error al conectarse ".$mysqli->connect_error;
@@ -60,7 +60,7 @@ class conexion
         {
             echo "Conexión Exitosa";
         }
-        */
+      */  
     }
     //Métodos
     public function SELECT($Procedimiento)

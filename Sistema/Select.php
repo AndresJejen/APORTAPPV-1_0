@@ -1,5 +1,5 @@
 <?php
-        require 'conexion.php';
+        require '../Persistencia/conexion.php';
         $consulta = "";
 
         if(isset($_POST["passw"])) //Si la consulta viene de LOGIN
@@ -42,7 +42,7 @@ function seleccionador($consult){
             }
             else
             {
-                die("Error en Consulta");
+                //die("Error en Consulta");
                 return false;
             }
             mysqli_free_result($result);

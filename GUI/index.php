@@ -25,6 +25,6 @@ catch(Exception $e)
         
     </head>
     <body>
-        <a href="cerrar_Session.php">Cerrar Sesion</a>
+        <a href="../Sistema/cerrar_Session.php">Cerrar Sesion</a>
     </body>    
 </html>    

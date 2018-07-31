@@ -12,12 +12,14 @@ jQuery.ajax({
         if(!respuesta.error) 
         {
             console.log(respuesta);
-            location.href ='Sistema/Principal/';   
+            location.href ='GUI/';   
         }
         else
         {
+            alertify.error("Usuario o Contraseña No Válidos");
+            $('#passw').val("");
+            $('#nombre').val("");
             console.log(respuesta);
-            location.href ='index.php';   
         }
 })
 .fail(function(resp){

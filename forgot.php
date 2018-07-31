@@ -25,10 +25,8 @@ try
     }
     else
     {
-        header("LOCATION: Sistema/Principal/");    
+        header("LOCATION: GUI/");    
     }
-    
-    
 }
 catch(Exception $e)
 {
@@ -38,18 +36,21 @@ catch(Exception $e)
 <!DOCTYPE html>
 <html class="no-js">
 <head>
-<meta charset="utf-8" />
-<title>jQuery Show Password Plugin</title>
+    <meta charset="utf-8" />
+    <title>Recuperar Contraseña</title>
 
-  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
-      <link rel="stylesheet" href="css/style.css">
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+    <link rel="stylesheet" href="css/Login/LoginStyle.css">
+    <link rel="stylesheet" href="css/Alertifycss/alertify.css">
+    <link rel="stylesheet" href="css/Alertifycss/themes/default.css">
+
+    <script src="Scripts/General/jquery/jquery-3.1.1.min.js"></script>
+    <script src="Scripts/General/alertifyjs/alertify.js"></script>   
 </head>
 <body>
-<script src="Scripts/jquery-3.1.1.min.js"></script>
-<script src="Scripts/ScriptConsultaLogin.js"></script>
 
 <div class="header">
-Bienvenido a APORTAPP v. 2.0  Ubicación del Servidor: Bogotá
+Bienvenido a APORTAPP v. 1.0  Ubicación del Servidor: Bogotá
 </div>
   
  <div class="login-wrap">
@@ -93,24 +94,8 @@ Bienvenido a APORTAPP v. 2.0  Ubicación del Servidor: Bogotá
 </div>
 <div class="base">  
 &copy; 2018 CoopesingUD.com
-<script type="text/javascript">
-    var d = new Date();
-    document.write('Fecha: '+d.getDate(),"/"+d.getMonth(),"/"+d.getFullYear());
-</script>
-<script type="text/javascript">
-function startTime(){
-today=new Date();
-h=today.getHours();
-m=today.getMinutes();
-s=today.getSeconds();
-m=checkTime(m);
-s=checkTime(s);
-document.getElementById('reloj').innerHTML=h+":"+m+":"+s;
-t=setTimeout('startTime()',500);}
-function checkTime(i)
-{if (i<10) {i="0" + i;}return i;}
-window.onload=function(){startTime();}
-</script>
+<div id="fecha"></div>
+<script src="Scripts/General/Reloj.js"></script>
 <div id="reloj" style="font-size:20px;"></div>
 </div>
 </body>>
