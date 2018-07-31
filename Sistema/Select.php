@@ -21,10 +21,24 @@
                 echo json_encode(array('error' => true));
             }
 		}
-		else
+		elseif(isset($_POST["Olvido"]))
 		{
-
+            $consulta = "call AdminExist('".$_POST['Olvido']."')";
+            $datos = seleccionador($consulta);
+            
+            if($datos["data"][0]['NombreAdmin']==$_POST["Olvido"] && $datos["data"][0]['NombreAdmin']!="")
+            {
+                echo json_encode(array('error' => false,'admin'=>$datos["data"][0]['NombreAdmin']));
+            }
+            else
+            {
+                echo json_encode(array('error' => true));
+            }
 		}
+        else
+        {
+                
+        }
 
 function seleccionador($consult){
     if($consult)

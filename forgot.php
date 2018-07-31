@@ -1,11 +1,11 @@
 <?php
 try
 {
-    if(isset($_POST['UsOlvido']))
+    if(isset($_GET['Olvido']))
     {
-        if(!($_POST['UsOlvido']==""))
+        if(!($_GET['Olvido']==""))
         {
-            $UsOlvido = $_POST['UsOlvido'];    
+            $UsOlvido = $_GET['Olvido'];    
         }
         else
         {    
@@ -14,7 +14,7 @@ try
     }
     else
     {
-        $UsOlvido = "USUARIO NO VALIDO";
+        header("LOCATION: index.php");
     }
     session_start();
     error_reporting(0);
@@ -25,12 +25,12 @@ try
     }
     else
     {
-        header("LOCATION: GUI/");    
+        header("LOCATION: GUI/");
     }
 }
 catch(Exception $e)
 {
-    
+    echo "<script> alert('Ha ocurrido el siguiente error, por favor tome nota y enviarlo al Administrador del sistema  [Session Login] ".$e."') </script>";
 }          
 ?>
 <!DOCTYPE html>

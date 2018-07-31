@@ -34,6 +34,7 @@ catch(Exception $e)
     <script src="Scripts/General/jquery/jquery-3.1.1.min.js"></script>
     <script src="Scripts/Login/ScriptConsultaLogin.js"></script>
     <script src="Scripts/General/alertifyjs/alertify.js"></script>
+    <script src="Scripts/Login/ScriptPasoRecuperar.js"></script>
 </head>
 
 <body>
@@ -62,7 +63,7 @@ Bienvenido a APORTAPP v. 1.0  Ubicación del Servidor: Bogotá
                     </form>
 				<div class="hr"></div>    
 				<center>
-                <form action="forgot.php" method="POST" id=form>                               
+                <form action="" method="POST" id=form>                               
                     <button class="button" type="submit" id=UsOlvido name="UsOlvido"  value="" class="btn-link">¿ Olvidaste la contraseña ?</button>
                 </form>
                 </center>
@@ -76,6 +77,5 @@ Bienvenido a APORTAPP v. 1.0  Ubicación del Servidor: Bogotá
 <script src="Scripts/General/Reloj.js"></script>
 <div id="reloj" style="font-size:20px;"></div>
 </div>
-<script src="Scripts/Login/ScriptPasoRecuperar.js"></script>
 </body>
 </html>

@@ -106,7 +106,7 @@ create table Administrador
 (
 Cod_Administrador integer not null auto_increment,
 NombreAdmin varchar(20) not null unique,
-Contraseña varchar(20) not null,
+Contrasena varchar(20) not null,
 Pregunta integer not null,
 Respuesta varchar(50) not null,
 primary key (Cod_Administrador),
