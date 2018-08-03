@@ -66,3 +66,17 @@ END$$
 
 DELIMITER ;
 
+/*Procedimiento Almacenado Todas las personas*/
+USE `aportapp1_0`;
+DROP procedure IF EXISTS `TodosPersonas`;
+
+DELIMITER $$
+USE `aportapp1_0`$$
+CREATE PROCEDURE `TodosPersonas` ()
+BEGIN
+SELECT Per.Id_Persona, Per.Nombre_Cliente, Per.Apellido1_Cliente, Per.Apellido2_Cliente, Est.DescripcionEstadoPersona 
+from Persona Per, estadopersona Est 
+where Per.Estado_Persona = Est.Cod_EstadoPersona;
+END$$
+
+DELIMITER ;

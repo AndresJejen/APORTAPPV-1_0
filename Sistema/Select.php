@@ -67,7 +67,18 @@
 		}
         else
         {
-                
+            //var_dump($_POST["Resp"]);
+            //var_dump($_POST["User"]);
+            $consulta = "call TodosPersonas()";
+            $datos = seleccionador($consulta);
+            if($datos)
+            {
+                echo json_encode($datos);
+            }
+            else
+            {
+                echo json_encode(array('error' => true));
+            }   
         }
 
 function seleccionador($consult){
