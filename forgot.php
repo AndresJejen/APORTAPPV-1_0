@@ -30,7 +30,7 @@ try
 }
 catch(Exception $e)
 {
-    echo "<script> alert('Ha ocurrido el siguiente error, por favor tome nota y enviarlo al Administrador del sistema  [Session Login] ".$e."') </script>";
+    echo "<script> alert('Ha ocurrido el siguiente error, por favor tome nota y enviarlo al Administrador del sistema  [Session Recuperar] ".$e."') </script>";
 }          
 ?>
 <!DOCTYPE html>
@@ -45,7 +45,8 @@ catch(Exception $e)
     <link rel="stylesheet" href="css/Alertifycss/themes/default.css">
 
     <script src="Scripts/General/jquery/jquery-3.1.1.min.js"></script>
-    <script src="Scripts/General/alertifyjs/alertify.js"></script>     
+    <script src="Scripts/General/alertifyjs/alertify.js"></script>
+    <script src="Scripts/Login/ScriptConsultaPregunta.js"></script>
 </head>
 <body>
 
@@ -57,10 +58,8 @@ Bienvenido a APORTAPP v. 1.0  Ubicación del Servidor: Bogotá
 	<div class="login-html">
 		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Olvido</label>
 		<div class="login-form">
-                    
-			
 			<div class="sign-up-htm">
-			<form action="" id="formulario" value="flogin">
+			<form action="" id="formolvido" method="post">
 				<div class="group">
 					<label for="RecuUsuario" class="label">Usuario</label>
                     <label id="RecuUsuario" name="RecuUsuario" type="text" class="input"><?php echo $UsOlvido ?></label>
@@ -87,7 +86,7 @@ Bienvenido a APORTAPP v. 1.0  Ubicación del Servidor: Bogotá
 				</div>
 				<div class="hr"></div>
 				</center>
-                </form>
+            </form>
 			</div>
 		</div>
 	</div>
@@ -98,7 +97,6 @@ Bienvenido a APORTAPP v. 1.0  Ubicación del Servidor: Bogotá
 <script src="Scripts/General/Reloj.js"></script>
 <div id="reloj" style="font-size:20px;"></div>
 </div>
-<script src="Scripts/Login/ScriptConsultaPregunta.js"></script> 
 <script>pregunta("<?php echo $_GET['Olvido'] ?>");</script>
 </body>
 </html>

@@ -12,7 +12,7 @@ jQuery.ajax({
         if(!respuesta.error) 
         {
             console.log(respuesta);
-            location.href ='GUI/';   
+            alertify.success("Bienvenido "+$('#nombre').val()+".",3,function(){location.href ='GUI/';});
         }
         else
         {

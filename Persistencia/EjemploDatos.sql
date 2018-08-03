@@ -33,4 +33,36 @@ END$$
 
 DELIMITER ;
 
+/*Procedimiento Almacenado Validacion de la respuesta*/
+USE `aportapp1_0`;
+DROP procedure IF EXISTS `SelectRespuesta`;
+
+DELIMITER $$
+USE `aportapp1_0`$$
+CREATE PROCEDURE `SelectRespuesta` (
+IN `_Nombre` VARCHAR(20), 
+IN `_Resp` VARCHAR(50))
+BEGIN
+SELECT Respuesta from Administrador
+where NombreAdmin = _Nombre and Respuesta = _Resp;
+END$$
+
+DELIMITER ;
+
+/*Procedimiento Almacenado Actualización Contraseña*/
+USE `aportapp1_0`;
+DROP procedure IF EXISTS `UpdatePass`;
+
+DELIMITER $$
+USE `aportapp1_0`$$
+CREATE PROCEDURE `UpdatePass` (
+IN `_Nombre` VARCHAR(20), 
+IN `_Pass` VARCHAR(20))
+BEGIN
+Update Administrador
+SET Contrasena = _Pass 
+Where NombreAdmin= _Nombre;
+END$$
+
+DELIMITER ;
 

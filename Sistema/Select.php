@@ -13,8 +13,7 @@
                 echo json_encode(array('error' => false));
                 session_start();
                 //var_dump($_SESSION['usuario'] = $datos["data"][0]['NombreAdmin']);
-                $_SESSION['usuario'] = $datos["data"][0]['NombreAdmin'];
-                
+                $_SESSION['usuario'] = $datos["data"][0]['NombreAdmin'];    
             }
             else
             {
@@ -44,6 +43,22 @@
             if($datos["data"][0]['Pregunta']!="")
             {
                 echo json_encode(array('error' => false,'Padmin'=>$datos["data"][0]['Pregunta']));
+            }
+            else
+            {
+                echo json_encode(array('error' => true));
+            }
+		}
+        elseif(isset($_POST["Resp"]))
+		{
+            //echo "aqui";            
+            //var_dump($_POST["Resp"]);
+            //var_dump($_POST["User"]);
+            $consulta = "call SelectRespuesta('".$_POST['User']."','".$_POST['Resp']."')";
+            $datos = seleccionador($consulta);
+            if($datos["data"][0]['Respuesta']!="")
+            {
+                echo json_encode(array('error' => false,'resp'=>$datos["data"][0]['Respuesta']));
             }
             else
             {

@@ -32,8 +32,8 @@ catch(Exception $e)
     <link rel="stylesheet" href="css/Alertifycss/themes/default.css">
 
     <script src="Scripts/General/jquery/jquery-3.1.1.min.js"></script>
-    <script src="Scripts/Login/ScriptConsultaLogin.js"></script>
     <script src="Scripts/General/alertifyjs/alertify.js"></script>
+    <script src="Scripts/Login/ScriptConsultaLogin.js"></script>
     <script src="Scripts/Login/ScriptPasoRecuperar.js"></script>
 </head>
 

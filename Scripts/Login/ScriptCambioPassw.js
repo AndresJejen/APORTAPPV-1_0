@@ -1,11 +1,10 @@
-jQuery(document).on('submit','#form',function(event){
-event.preventDefault();
-$('#UsOlvido').val($('#nombre').val());    
+jQuery(document).on('submit','#formolvido',function(event){
+event.preventDefault();     
     jQuery.ajax({
     url:'Sistema/Select.php',
     type:'POST',
     dataType: 'json',
-    data: {'Olvido': $('#UsOlvido').val()},
+    data: {'Respuesta': $('#UsOlvido').val()},
     beforeSend: function(){
     }
 })
@@ -30,3 +29,8 @@ $('#UsOlvido').val($('#nombre').val());
     console.log("complete");   
 }); 
 });
+
+function actualizar(pass)
+{
+    
+}
