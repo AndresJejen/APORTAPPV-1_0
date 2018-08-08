@@ -18,6 +18,58 @@
 	</div>
 </div><!-- /.container -->
 
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalNuevoAsociado">
+  Nuevo Asociado
+    <span class="glyphicon glyphicon-plus"></span>
+</button>
+
+<!-- Modal para nuevo registro-->
+<div class="modal fade" id="ModalNuevoAsociado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Nuevo Asociado</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        HOlaaaaa aca van los campos . Error 404. :/
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal para Editar-->
+<div class="modal fade" id="ModalEditarAsociado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar Asociado</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Editar Asociado WOWOWOWOWWO 404
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar Cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <div class="row">
 		<div id="cuadro1" class="col-sm-12 col-md-12 col-lg-12">
 			<div class="col-sm-offset-2 col-sm-8">
@@ -32,7 +84,7 @@
 							<th>Apellido 1</th>
 							<th>Apellido 2</th>
 							<th>Estado</th>
-							<th></th>											
+							<th>Editar</th>											
 						</tr>
 					</thead>					
 				</table>

@@ -3,13 +3,16 @@ try
 {
     session_start();
     $varsesion = $_SESSION['usuario'];
+    if($varsesion == null || $varsesion == '')
+        {
+            header("LOCATION: ../index.php");
+        }
 }
 catch(Exception $e)
 {
         if($varsesion == null || $varsesion == '')
         {
-            echo 'Usted no tiene autorización';
-            die();
+            header("LOCATION: ../index.php");
         }
 }    
 ?>
