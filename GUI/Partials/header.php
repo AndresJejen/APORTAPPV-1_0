@@ -23,7 +23,7 @@ catch(Exception $e)
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="/favicon.ico">
@@ -38,7 +38,9 @@ catch(Exception $e)
 	<!-- Buttons DataTables -->
 	<link rel="stylesheet" href="../css/Bootstrap/buttons.bootstrap.min.css">
 	<link rel="stylesheet" href="../css/Bootstrap/font-awesome.min.css">
-	
+    <!-- Buttons DataTime -->     
+    <link rel="stylesheet" href="../css/jquery.datetimepicker.css">    
+	        
 		    <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -59,8 +61,8 @@ catch(Exception $e)
 	<script src="../Scripts/bootstrap/vfs_fonts.js"></script>
 	<!--Librerias para botones de exportación-->
 	<script src="../Scripts/bootstrap/buttons.html5.min.js"></script>
-    
-	
+    <script src="../Scripts/jquery.datetimepicker.full.js"></script>  
+                     
   </head>
 
   <body>

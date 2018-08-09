@@ -1,6 +1,7 @@
 $(document).on("ready",function()
 {
     listar();
+     $("#ModalNuevo").load('../GUI/ModalNuevo.php');
 });
 
 var listar = function()
