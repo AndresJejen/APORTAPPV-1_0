@@ -33,3 +33,47 @@ var Obtener_data_editar = function(tbody ,table)
         console.log(data);
     });
 }
+
+jQuery(document).on('submit','#FormNuevo',function(event){    
+event.preventDefault();
+jQuery.ajax({
+    url:'../Sistema/Transacct.php',
+    type:'POST',
+    dataType: 'json',
+    data: $(this).serialize(),
+    beforeSend: function(){
+    }
+})
+.done(function(respuesta){
+        if(!respuesta.error) 
+        {
+            console.log(respuesta);
+            alertify.success("Usuario Exitosamente Registrado",3,retorno);
+        }
+        else
+        {
+            alertify.error("Error en el registro, "+respuesta.messageerror+".",3,retorno);
+            $('#NIdPersona').val("");
+            $('#NId').val("");
+            $('#NNombre').val("");
+            $('#N1Ape').val("");
+            $('#N2Ape').val("");
+            $('#NdateNac').val("");
+            $('#NDireccion').val("");
+            $('#NContacto').val("");
+            $('#NCorreo').val("");
+            console.log(respuesta);
+        }
+})
+.fail(function(resp){
+    console.log(resp);   
+}) 
+.always(function(){
+    console.log("complete");   
+});
+});
+
+function retorno()
+{
+    location.href ="index.php";
+}

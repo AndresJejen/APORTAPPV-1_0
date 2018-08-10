@@ -79,3 +79,36 @@ where Per.Estado_Persona = Est.Cod_EstadoPersona;
 END$$
 
 DELIMITER ;
+
+/*Procedimiento Almacenado NuevoAsociado*/
+DROP procedure IF EXISTS `Nuevo_Asociado`;
+
+DELIMITER $$
+USE `aportapp1_0`$$
+CREATE PROCEDURE `Nuevo_Asociado` (
+IN  `_Nombre` VARCHAR(50),
+IN  `_Ap1` VARCHAR(50),
+IN  `_Ap2` VARCHAR(50),
+IN  `_Id` bigint unsigned,
+IN  `_TipoId` int,
+IN  `_Genero` int,
+IN  `_FechaNaci` date,
+IN  `_FechaIng` date,
+IN  `_Contacto` int,
+IN  `_Direccion` varchar(50),
+IN  `_Estado` int,
+IN  `_Correo` varchar(70)
+)
+BEGIN
+INSERT INTO `Persona` 
+(`Id_Persona`, `Cod_Tipo_Indentificacion`, `Cod_Genero`, `Nombre_Cliente`, 
+`Apellido1_Cliente`, `Apellido2_Cliente`, `Fecha_Nacimiento`, `Fecha_ingreso`,
+`Fecha_retiro`, `Telefono_Contacto`, `Direccion`, `Estado_Persona`, `correo_Persona`) 
+VALUES 
+(_Id, _TipoId, _Genero, _Nombre, _Ap1, _Ap2, _FechaNaci, CURDATE(), NULL,_Contacto, _Direccion, '1', _Correo);
+END$$
+
+DELIMITER ;
+
+
+

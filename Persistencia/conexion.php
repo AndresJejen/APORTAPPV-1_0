@@ -76,6 +76,7 @@ class conexion
         try{
             $this->vmysqli->autocommit(FALSE);
             $this->vmysqli->begin_transaction(MYSQLI_TRANS_START_WITH_CONSISTENT_SNAPSHOT);
+            //echo $Procedimiento;
             if($result=$this->vmysqli->query($Procedimiento))
             {
                 if($this->vmysqli->commit())
@@ -90,7 +91,7 @@ class conexion
             else
             {
                 $this->vmysqli->rollBack();
-                return true;
+                return "Error feo";
             }
             $this->vmysqli->close();
         }

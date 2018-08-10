@@ -22,13 +22,13 @@
 </style>
 
 
-<!-- Modal para Editar-->
+<!-- Modal para Nuevo-->
 <div class="modal fade" id="ModalNuevoAsociado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-   <form action="nuevo.php" method="get">
+   <form action="" method="get" id="FormNuevo">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Nuevo Asociado</h5>
+          <h2 class="modal-title" id="exampleModalLabel" align="center"><B>Nuevo Asociado</B></h2>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -81,7 +81,7 @@
         
         <label>Fecha de nacimiento</label>
         <div class='input-group date' id='datetimepicker1'>
-                  <input type="text" id="datetimepicker" name="NFechaNacimiento" class="form-control input-sm" readonly required/>     
+                  <input type="text" id="NdateNac" name="NdateNac" class="form-control input-sm" readonly required/>     
                   <span class="input-group-addon">
                   <span class="glyphicon glyphicon-calendar"></span>
               </span>
@@ -91,7 +91,7 @@
              var d = new Date();
     var n = d.getFullYear();
              jQuery.datetimepicker.setLocale('es');
-             $("#datetimepicker").datetimepicker({
+             $("#NdateNac").datetimepicker({
 	           lang:'es',
 	           timepicker:false,
 	           format:'Y-m-d',
@@ -109,7 +109,7 @@
         <input type="text" name="NDireccion" id="NDireccion" pattern="[A-Z a-z0-9]{1,50}" class="form-control input-sm" required>
         
         <label>Correo</label>
-        <input type="text" name="NDireccion" id="NDireccion" pattern="[A-Za-z0-9_-/\|¬°!#$=?¿]{1,50}" class="form-control input-sm" required>
+        <input type="text" name="NCorreo" id="NCorreo" pattern="[A-Za-z0-9_-@.]{1,50}" class="form-control input-sm" required>
         
       </div>
       <div class="modal-footer">

@@ -52,8 +52,6 @@
   </div>
 </div>
 
-
-
 <div class="row">
 		<div id="cuadro1" class="col-sm-12 col-md-12 col-lg-12">
 			<div class="col-sm-offset-2 col-sm-8">

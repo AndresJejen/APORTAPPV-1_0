@@ -38,8 +38,11 @@ catch(Exception $e)
 	<!-- Buttons DataTables -->
 	<link rel="stylesheet" href="../css/Bootstrap/buttons.bootstrap.min.css">
 	<link rel="stylesheet" href="../css/Bootstrap/font-awesome.min.css">
-    <!-- Buttons DataTime -->     
-    <link rel="stylesheet" href="../css/jquery.datetimepicker.css">    
+    <!-- DataTime -->     
+    <link rel="stylesheet" href="../css/jquery.datetimepicker.css">  
+    <!-- Alertify -->       
+    <link rel="stylesheet" href="../css/Alertifycss/alertify.css">
+    <link rel="stylesheet" href="../css/Alertifycss/themes/default.css">    
 	        
 		    <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -62,7 +65,7 @@ catch(Exception $e)
 	<!--Librerias para botones de exportación-->
 	<script src="../Scripts/bootstrap/buttons.html5.min.js"></script>
     <script src="../Scripts/jquery.datetimepicker.full.js"></script>  
-                     
+    <script src="../Scripts/General/alertifyjs/alertify.js"></script>                 
   </head>
 
   <body>
