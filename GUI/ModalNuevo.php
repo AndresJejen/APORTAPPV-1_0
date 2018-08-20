@@ -89,7 +89,8 @@
          
          <script>
              var d = new Date();
-    var n = d.getFullYear();
+             var n = d.getFullYear();
+             var m = d.getMonth();
              jQuery.datetimepicker.setLocale('es');
              $("#NdateNac").datetimepicker({
 	           lang:'es',
@@ -98,7 +99,7 @@
 	           formatDate:'Y-m-d',
 	           //minDate:'-1970/01/02', // yesterday is minimum date
 	           maxDate:'+1970/01/01', // and tommorow is maximum date calendar
-               yearEnd: n    
+               yearEnd: n
 });
          </script>
      
