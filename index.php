@@ -59,7 +59,7 @@ Bienvenido a APORTAPP v. 1.0  Ubicación del Servidor: Bogotá
 				<div class="group">
 					<input type="submit" class="button_2" value="Ingresar">
 				</div>
-                   </center>
+                </center>
                     </form>
 				<div class="hr"></div>    
 				<center>
